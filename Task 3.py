@@ -1,5 +1,5 @@
-from random import choice
-print("Welcome to Popchat\nOne of our operators will be pleased to help y`          ou today")
+import random
+print("Welcome to Popchat\nOne of our operators will be pleased to help you today")
 helpdesk = ["Elliot","Tyrell","Darlene","Angela"]       #List of helpdesk operators
 probability_list = [9,9,9,9,6,9,9,9,9,9]                #List to check for network error
 
@@ -17,8 +17,8 @@ if "@" in email:            #If "@" is in email, then only the email is valid
     if count >=2 and e[1] == "pop.ac.uk":   
         valid = True 
 
-        operator = choice(helpdesk)             #Pick any operator from the helpdesk list
-        probability = choice(probability_list)  #Pick any number from probability list
+        operator = random.choice(helpdesk)             #Pick any operator from the helpdesk list
+        probability = random.choice(probability_list)  #Pick any number from probability list
 
         print("Hi,",e[0].capitalize(),"! Thank you, and welcome to PopChat!")   #
         print("My name is",operator,", and it will be my pleasure to help you.")
@@ -37,7 +37,7 @@ if "@" in email:            #If "@" is in email, then only the email is valid
             #If user wants to exit the chat service, an item from exit_prompt must be entered
             exit_prompt = ["EXIT","STOP","QUIT","END","GOODBYE","BYE"]
             #Any replt from invalid_prompt may be displayed
-            random_reply = choice(invalid_prompt)
+            random_reply = random.choice(invalid_prompt)
             if "WIFI" in user_prompt.upper():
                 print("The wifi is excellent around campus.")
             elif "LIBRARY" in user_prompt.upper():
