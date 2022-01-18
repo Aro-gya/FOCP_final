@@ -27,6 +27,6 @@ else:
         print(f"Min Speed: {min(data_list)/1.61:.1f} MPH, {min(data_list):.1f} KPH")
         
         average = mean(data_list)
-        print (f"Avg Speed: {(average/1.61):.1f} MPH,  {average:.1f} KPH.")
+        print(f"Avg Speed: {(average/1.61):.1f} MPH, {average:.1f} KPH.")
     else:
         print("Invalid")
